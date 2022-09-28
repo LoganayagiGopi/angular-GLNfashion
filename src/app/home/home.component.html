@@ -1,0 +1,125 @@
+
+<mat-toolbar class="mat-elevation-z8">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/006/956/760/small/gln-letter-logo-design-on-white-background-gln-creative-initials-letter-logo-concept-gln-letter-design-vector.jpg" width="30px" height="30px" style="border-radius:50%">
+   &nbsp; <b> GLN Fashion</b>
+    <input type="search"  placeholder="Search" [(ngModel)]="searchTerm" (keyup)="Search($event)"><i class="fa-solid fa-magnifying-glass"></i>
+      
+      <div class="d-flex">
+        
+        <button type="button"  id="cart" data-bs-toggle="modal" routerLink="/cart" data-bs-target="#exampleModal3" >
+          <i class="fa-solid fa-cart-shopping"></i>
+          <div style="font-size: 10px; padding: 3px; margin: 0;" class="btn btn-danger">{{totalItem}}</div>Cart</button>
+          <button type="button" id="cart" routerLink="/userlogin"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+      
+        </div>
+  </mat-toolbar>
+  
+  <nav class="navbar">
+    <div class="container">
+    <div class="item">
+        <a (click)="filter('')">
+            <h2>All products</h2>
+        </a>
+    </div>
+
+    
+    <div class="item">
+        
+    <div class="dropdown">
+        <h2 >Mens <i class="fa-solid fa-angle-down"></i></h2>
+        <div class="dropdown-content">
+        <p (click)="filter('Tshirt-Mens')">T-Shirt</p>
+        <p (click)="filter('Shirt')">Shirt</p>
+        <p (click)="filter('Jeans')">Jeans</p>
+        <p (click)="filter('Track-Pant')">Track Pant</p>
+        
+        </div>
+      </div>
+      
+      </div>
+    
+    <div class="item">
+            <div class="dropdown">
+                <h2>Womens <i class="fa-solid fa-angle-down"></i></h2>
+                <div class="dropdown-content">
+                  <p (click)="filter('Kurta')">Kurta suit set</p>
+                  <p (click)="filter('Jeans')">Jeans</p>
+                  <p (click)="filter('Top')">Top</p>
+                  <p (click)="filter('Skirts')">Skirts</p>
+                  
+                  
+                </div>
+              </div>
+    </div>
+    
+    <div class="item">
+      
+            <div class="dropdown">
+                <h2>Kids-Girls<i class="fa-solid fa-angle-down"></i></h2>
+                <div class="dropdown-content">
+                  <p (click)="filter('Frocks')">Frocks</p>
+                  <p (click)="filter('Skirts')">Skirts</p>
+                  <p (click)="filter('Tops')">Tops</p>
+                  <p (click)="filter('Dungarees And Playsuit')">Dungarees And Playsuit</p>
+                </div>
+              </div>
+        
+    </div>
+    
+    <div class="item">
+        
+            <div class="dropdown">
+                <h2>Kids-Boys <i class="fa-solid fa-angle-down"></i></h2>
+                <div class="dropdown-content">
+                  <p (click)="filter('Sarees')">Sarees</p>
+                  <p (click)="filter('Sarees')">Sarees</p>
+                  <p (click)="filter('Sarees')">Sarees</p>
+                  <p (click)="filter('Sarees')">Sarees</p>
+                </div>
+              </div>
+        
+    </div>
+
+    <div class="item">
+        
+            <div class="dropdown">
+                <h2>Born-Babys <i class="fa-solid fa-angle-down"></i></h2>
+                <div class="dropdown-content">
+                  <p (click)="filter('Clothing Sets')">Clothing Sets</p>
+                  <p (click)="filter('Pyjama Sets')">Pyjama Sets</p>
+                  <p (click)="filter('Winter Wear')">Winter Wear</p>
+                </div>
+              </div>
+            
+              </div>
+
+</div>
+</nav>
+
+
+<!--slider-->
+<div id="slider">
+    <figure>
+        <img src="https://assets.ajio.com/medias/sys_master/images/images/h1a/hfe/50097341890590/Top-banner-carousel-banner-1.jpg">
+        <img src="https://assets.ajio.com/medias/sys_master/images/images/h54/h9b/50097341956126/Top-banner-carousel-banner-2.jpg">
+        <img src="https://assets.ajio.com/medias/sys_master/images/images/hc9/he1/52618113024030/Top-banner-carousel-Festive-Kurtas-Starting-399.jpg">
+        <img src="https://assets.ajio.com/medias/sys_master/images/images/h3b/h3d/50097342087198/Top-banner-carousel-banner-4.jpg">
+        <img src="https://assets.ajio.com/medias/sys_master/images/images/h1a/hfe/50097341890590/Top-banner-carousel-banner-1.jpg">
+    </figure>
+  </div>
+
+
+
+<div id="abc"  *ngFor= "let item of filterCategory | filter:searchKey:'name'">
+    <img src={{item.image}} width="240px" height="230px"><br><br>
+    <h3>{{item.name}}</h3>
+    <h4>M.R.P : Rs.<b> {{item.price}} </b></h4>
+    <h4>Quantity {{item.kg}}</h4>
+    <button class="btn btn-primary" (click)=addtocart(item)>Add to cart<i class="fa-solid fa-plus"></i></button>
+      
+</div>
+
+
+  
+  
+  

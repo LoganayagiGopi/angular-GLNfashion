@@ -1,0 +1,62 @@
+
+<body>
+      
+    <div class="container">
+      <nav class="navbar navbar-light">
+        <div class="container-fluid">
+             <h1 style="color:aliceblue"><img src="https://static.vecteezy.com/system/resources/thumbnails/006/956/760/small/gln-letter-logo-design-on-white-background-gln-creative-initials-letter-logo-concept-gln-letter-design-vector.jpg" width="30px" height="30px" style="border-radius:50%">
+              GLN Fashion</h1>
+             <div class="d-flex">
+                <button type="button" class="btn" routerLink="/vendorlogin">Vendor Login</button>
+                <button type="button" class="btn" routerLink="/admin">Admin</button>
+                <button type="button" class="btn" routerLink="/userlogin">Login</button>
+          </div>
+        </div>
+    </nav><br><br>
+  
+  
+  <div id="grid">
+    <div class="slide">
+      <div class="eat">
+  
+  
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/956/760/small/gln-letter-logo-design-on-white-background-gln-creative-initials-letter-logo-concept-gln-letter-design-vector.jpg" width="303px" height="303px"
+        style="border-radius:50%; padding: 40px; margin: 40px;">
+  
+           </div></div>
+        <div class="row">
+            
+                <div class="card">
+                  <div class="text-center">
+                    <h1>VendorLogin</h1>
+                    <h6>
+                        Please enter Email & Password !!
+                    </h6>
+                    </div>
+                    <form [formGroup]="vendorloginForm" (ngSubmit)="login()">
+                        <div class="mb-3">
+                          <div class="login"><mat-form-field appearance="fill">
+                            <mat-label #userId>EmailID</mat-label>
+                          <input matInput formControlName="EmailID">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field appearance="fill">
+                          <mat-label #password>Password</mat-label>
+                          <input matInput formControlName="Pass">
+                        </mat-form-field>
+                       </div>
+                       </div>
+                        
+                        <button type="submit" class="btn btn-primary">Login</button><br>
+                        
+                    </form>
+                </div>
+        </div>
+    </div>
+  </div>
+  </body>
+  
+  
+  
+  
+  

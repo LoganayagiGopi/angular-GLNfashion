@@ -1,0 +1,57 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Sign Up</h1>
+                    <h6>
+                        Register Yourself!!
+                    </h6>
+                    </div>
+                    <form [formGroup]="Register" (ngSubmit)="signUp()">
+                        <div class="mb-3">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Firstname</mat-label>
+                                <input matInput formControlName="Firstname">
+                              </mat-form-field>
+                      
+                              <mat-form-field appearance="fill">
+                                <mat-label>Lastname</mat-label>
+                                <input matInput formControlName="Lastname">
+                              </mat-form-field>
+                             
+                              <mat-form-field appearance="fill">
+                                <mat-label>Email ID</mat-label>
+                                <input matInput type="email" formControlName="EmailId">
+                              </mat-form-field>
+                            
+                              <mat-form-field appearance="fill">
+                                <mat-label>Mobile No</mat-label>
+                                <input matInput formControlName="MobileNo">
+                              </mat-form-field>
+                              
+                              <mat-form-field appearance="fill">
+                              <mat-label>Password</mat-label>
+                                <input matInput formControlName="Password">
+                              </mat-form-field>
+                              
+                              <mat-form-field appearance="fill">
+                                <mat-label>Confirm Password</mat-label>
+                                <input matInput formControlName="Cpassword">
+                              </mat-form-field>
+                             
+                              <mat-form-field appearance="fill">
+                                <mat-label>Address</mat-label>
+                                <input matInput formControlName="Address">
+                              </mat-form-field>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">SignUp</button><br>
+                        <a routerLink="/userlogin">Already a member Login!!</a>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
